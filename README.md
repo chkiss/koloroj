@@ -4,8 +4,8 @@ A terminal tool for picking and comparing 256-color terminal color swatches.
 
 Type a color code (0–255) into a slot and instantly see what it actually looks
 like: the color as **foreground text** (`lorem ipsum 12345`), as a **solid
-block**, and a short **friendly name** (e.g. `230 → cream`, `196 → red`). Build
-up two schemes side by side — **A** and **B** — and compare them row for row, so
+block**, and its **name and hex** (e.g. `230 → cornsilk 1 #ffffd7`). Build up
+two schemes side by side — **A** and **B** — and compare them row for row, so
 you can audit a palette before committing it to a config.
 
 A built-in **256-color reference grid** shows every code next to its swatch, and
@@ -15,7 +15,8 @@ a column of codes can be copied straight to the clipboard for pasting into your
 ## Features
 
 - Two schemes of 10 slots each, edited live with instant preview
-- Foreground text, solid block, and friendly name per color
+- Foreground text, solid block, and the color's name + hex per slot
+- Authoritative xterm color names (the standard `jonasjacek.github.io/colors` set)
 - 256-color reference grid with code + swatch (scales to terminal width)
 - Swap schemes (`s`), copy a column's codes to the clipboard (`c`)
 - State persists between runs, with an automatic backup
