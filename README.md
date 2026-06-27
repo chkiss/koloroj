@@ -23,16 +23,24 @@ a column of codes can be copied straight to the clipboard for pasting into your
 
 ## Run
 
+Run it bare in a terminal for the interactive app:
+
 ```sh
-python3 koloroj_tui.py
+python3 koloroj.py
+```
+
+Or give it codes (or pipe them in) to print swatches and exit — handy in
+scripts and pipes:
+
+```sh
+python3 koloroj.py 230 196 21      # codes as arguments
+python3 koloroj.py 16-21 226       # inclusive ranges
+echo 16-21 | python3 koloroj.py    # codes on stdin
 ```
 
 Requires Python 3 with the standard-library `curses` module and a 256-color
-terminal (`TERM=xterm-256color`). Copying to the clipboard uses `wl-copy`,
-`xclip`, or `xsel` if one is installed.
-
-A simpler non-interactive variant, `koloroj.py`, prints swatches for codes given
-on the command line (`python3 koloroj.py 230 196 21`).
+terminal (`TERM=xterm-256color`). Copying a column to the clipboard uses
+`wl-copy`, `xclip`, or `xsel` if one is installed.
 
 ## Keys
 
